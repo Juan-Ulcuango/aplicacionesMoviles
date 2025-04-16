@@ -5,66 +5,103 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@drawable/fondo_app"
+    android:scaleType="centerCrop"
+    tools:context=".MainActivity"
+    >
+
+    <!-- Capa overlay -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#80000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp">
 
         <LinearLayout
-            android:orientation="vertical"
-            android:padding="16dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <EditText
                 android:id="@+id/ipInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="IP Base (ej: 192.168.1.0)"
                 android:inputType="text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+            />
 
             <EditText
                 android:id="@+id/maskInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="Máscara (ej: 24)"
                 android:inputType="number"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                />
 
             <EditText
                 android:id="@+id/subnetCountInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="Número de Subredes"
                 android:inputType="number"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                />
 
             <Button
                 android:id="@+id/generateSubnetsButton"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button_deep_blue"
+                android:padding="16dp"
                 android:text="Generar Subredes"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:textColor="@color/button_text" />
 
             <LinearLayout
                 android:id="@+id/hostsInputContainer"
-                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp" />
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:textColor="@color/button_text"
+                android:textColorHint="@android:color/white"
+                />
 
             <Button
                 android:id="@+id/calculateButton"
+                android:layout_width="250dp"
+                android:layout_height="56dp"
+                android:background="@drawable/rounded_button_deep_blue"
+                android:elevation="4dp"
+                android:padding="8dp"
                 android:text="Calcular"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:textColor="@color/button_text"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TableLayout
                 android:id="@+id/resultsTable"
-                android:stretchColumns="*"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="16dp" />
+                android:paddingTop="16dp"
+                android:stretchColumns="*" />
         </LinearLayout>
     </ScrollView>
 

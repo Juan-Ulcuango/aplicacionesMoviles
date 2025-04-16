@@ -2,4 +2,15 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!-- Paleta basada en #00134e -->
+    <color name="deep_blue">#0E2571</color>         <!-- Color base -->
+    <color name="deep_blue_dark">#101F57</color>   <!-- 20% más oscuro -->
+    <color name="deep_blue_light">#1a2b6e</color>  <!-- 20% más claro -->
+    <color name="accent_blue">#3D5AFE</color>      <!-- Azul acento -->
+
+    <!-- Colores para el botón -->
+    <color name="button_normal">@color/deep_blue</color>
+    <color name="button_pressed">#344EAF</color>
+    <color name="button_text">#FFFFFF</color>       <!-- Texto blanco -->
+    <color name="button_stroke">#000000</color>     <!-- Borde negro -->
 </resources>

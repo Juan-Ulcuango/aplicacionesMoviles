@@ -50,6 +50,13 @@ public class MainActivity extends AppCompatActivity {
             EditText input = new EditText(this);
             input.setHint("Hosts para Subred " + (i + 1));
             input.setInputType(InputType.TYPE_CLASS_NUMBER);
+
+            // Establecer el color del hint a blanco
+            input.setHintTextColor(getResources().getColor(android.R.color.white));
+
+            // Establecer el color del texto de entrada a blanco
+            input.setTextColor(getResources().getColor(android.R.color.white));
+
             hostsInputContainer.addView(input);
             hostInputs.add(input);
         }
@@ -158,6 +165,7 @@ public class MainActivity extends AppCompatActivity {
         TextView tv = new TextView(this);
         tv.setPadding(8, 8, 8, 8);
         tv.setText(text);
+        tv.setTextColor(getResources().getColor(android.R.color.white)); // Añade esta línea
         return tv;
     }
 
